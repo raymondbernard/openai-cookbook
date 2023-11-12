@@ -163,7 +163,7 @@ if st.button('Create fine-tuning job'):
 if OPENAI_API_KEY:
     openai.api_key = OPENAI_API_KEY
 else:
-    api_key_input = st.sidebar.text_input('Enter your OpenAI API Key:')
+    api_key_input = st.sidebar.text_input('Enter your OpenAI API Key:', key='api_key_input_unique')
     if api_key_input:
         openai.api_key = api_key_input
 
